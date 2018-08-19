@@ -1,10 +1,16 @@
 import {BrowserModule} from '@angular/platform-browser';
-import {NgModule} from '@angular/core';
+import {APP_INITIALIZER, NgModule} from '@angular/core';
 
 import {AppComponent} from './app.component';
 import {FormsModule} from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {AngularMaterialModule} from './angular-material/angular-material.module';
+import {AppLoadService} from './service/app-load.service';
+import {HttpClientModule} from '@angular/common/http';
+
+export function get_settings(appLoadService: AppLoadService): () => Promise<any> {
+  return () => appLoadService.getSettings();
+}
 
 @NgModule({
   declarations: [
@@ -14,9 +20,17 @@ import {AngularMaterialModule} from './angular-material/angular-material.module'
     BrowserModule,
     FormsModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     AngularMaterialModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: APP_INITIALIZER,
+      useFactory: get_settings,
+      multi: true,
+      deps: [AppLoadService]
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {
