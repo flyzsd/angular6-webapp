@@ -1,5 +1,6 @@
-import {TestBed, async} from '@angular/core/testing';
+import {async, TestBed} from '@angular/core/testing';
 import {AppComponent} from './app.component';
+import {MatCardModule} from '@angular/material';
 
 describe('AppComponent', () => {
   let fixture = null;
@@ -8,6 +9,9 @@ describe('AppComponent', () => {
     TestBed.configureTestingModule({
       declarations: [
         AppComponent
+      ],
+      imports: [
+        MatCardModule,
       ],
     }).compileComponents().then(() => {
       fixture = TestBed.createComponent(AppComponent);
