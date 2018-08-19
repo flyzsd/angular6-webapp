@@ -4,7 +4,7 @@ import {APP_INITIALIZER, NgModule} from '@angular/core';
 import {AppComponent} from './app.component';
 import {FormsModule} from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {AngularMaterialModule} from './angular-material/angular-material.module';
+import {AngularMaterialModule} from './angular-material';
 import {AppLoadService} from './service/app-load.service';
 import {HttpClientModule} from '@angular/common/http';
 

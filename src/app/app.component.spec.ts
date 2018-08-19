@@ -1,6 +1,6 @@
 import {async, TestBed} from '@angular/core/testing';
 import {AppComponent} from './app.component';
-import {AngularMaterialModule} from './angular-material/angular-material.module';
+import {AngularMaterialModule} from './angular-material';
 
 describe('AppComponent', () => {
   let fixture = null;
