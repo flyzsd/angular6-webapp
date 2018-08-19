@@ -1,6 +1,9 @@
 // Protractor configuration file, see link for more information
 // https://github.com/angular/protractor/blob/master/lib/config.ts
+// https://github.com/angular/protractor/blob/master/docs/browser-setup.md
 
+console.log("use Headless Chromium with Puppeteer instead of local Chrome");
+const puppeteer = require('puppeteer');
 const { SpecReporter } = require('jasmine-spec-reporter');
 
 exports.config = {
@@ -10,7 +13,8 @@ exports.config = {
   ],
   capabilities: {
     chromeOptions: {
-      args: ['--headless']
+      args: ['--headless'],
+      binary: puppeteer.executablePath()
     },
     'browserName': 'chrome'
   },

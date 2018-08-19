@@ -1,5 +1,11 @@
 // Karma configuration file, see link for more information
 // https://karma-runner.github.io/1.0/config/configuration-file.html
+// https://github.com/GoogleChrome/puppeteer
+// https://github.com/karma-runner/karma-chrome-launcher#headless-chrome-with-puppeteer
+
+console.log("use Headless Chromium with Puppeteer instead of local Chrome");
+const puppeteer = require('puppeteer');
+process.env.CHROME_BIN = puppeteer.executablePath();
 
 module.exports = function (config) {
   config.set({
