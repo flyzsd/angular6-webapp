@@ -5,11 +5,12 @@
     "ng": "ng",
     "clean": "rm -rf ./coverage && rm -rf ./dist",
     "start": "ng serve --base-href=/angular6/",
-    "build": "ng build --base-href=/angular6/ --prod --vendor-chunk=true",
+    "build": "ng build --base-href=/angular6/ --prod --vendor-chunk=true --stats-json",
     "test": "ng test --watch=false --code-coverage=true --source-map=true",
     "lint": "ng lint && ng lint angular6-webapp-e2e",
     "e2e": "ng e2e",
-    "tsc": "tsc -w"
+    "tsc": "tsc -w",
+    "stats": "webpack-bundle-analyzer dist/angular6-webapp/stats.json"
   },
   "private": true,
   "dependencies": {
@@ -49,6 +50,7 @@
     "puppeteer": "^1.7.0",
     "ts-node": "~5.0.1",
     "tslint": "~5.9.1",
-    "typescript": "~2.7.2"
+    "typescript": "~2.7.2",
+    "webpack-bundle-analyzer": "^2.13.1"
   }
 }
