@@ -1,0 +1,17 @@
+mat-card {
+  max-width: 400px;
+
+  mat-card-header {
+    div {
+      //background-image: url('./../../../assets/images/shiba1.jpg');
+      background-image: url('/assets/images/shiba1.jpg');
+      background-size: cover;
+    }
+  }
+
+  mat-card-actions {
+    button {
+      font-size: 14px;
+    }
+  }
+}

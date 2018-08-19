@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "clean": "rm -rf ./coverage && rm -rf ./dist",
-    "start": "ng serve --base-href=/angular6/ --aot",
+    "start": "ng serve --base-href=/angular6/",
     "build": "ng build --base-href=/angular6/ --prod --vendor-chunk=true",
     "test": "ng test --watch=false --code-coverage=true --source-map=true",
     "lint": "ng lint && ng lint angular6-webapp-e2e",
