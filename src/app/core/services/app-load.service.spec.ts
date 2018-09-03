@@ -1,7 +1,7 @@
 import {TestBed, inject} from '@angular/core/testing';
 
 import {AppLoadService} from './app-load.service';
-import {HttpClientTestingModule} from '../../../node_modules/@angular/common/http/testing';
+import {HttpClientTestingModule} from '@angular/common/http/testing';
 
 describe('AppLoadService', () => {
   beforeEach(() => {

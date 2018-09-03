@@ -5,8 +5,9 @@ import {AppComponent} from './app.component';
 import {FormsModule} from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {AngularMaterialModule} from './angular-material';
-import {AppLoadService} from './service/app-load.service';
+import {AppLoadService} from './core/services/app-load.service';
 import {HttpClientModule} from '@angular/common/http';
+import {CoreModule} from './core/core.module';
 
 export function get_settings(appLoadService: AppLoadService): () => Promise<any> {
   return () => appLoadService.getSettings();
@@ -21,7 +22,8 @@ export function get_settings(appLoadService: AppLoadService): () => Promise<any>
     FormsModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    AngularMaterialModule
+    AngularMaterialModule,
+    CoreModule
   ],
   providers: [
     {
