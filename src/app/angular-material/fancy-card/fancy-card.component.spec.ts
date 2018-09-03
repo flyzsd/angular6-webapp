@@ -2,6 +2,7 @@ import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
 import {FancyCardComponent} from './fancy-card.component';
 import {MatCardModule} from '@angular/material';
+import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 
 describe('FancyCardComponent', () => {
   let component: FancyCardComponent;
@@ -15,6 +16,7 @@ describe('FancyCardComponent', () => {
       imports: [
         MatCardModule,
       ],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA]
     }).compileComponents().then(() => {
       fixture = TestBed.createComponent(FancyCardComponent);
       component = fixture.componentInstance;

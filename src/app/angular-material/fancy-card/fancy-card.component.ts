@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import '@web-components/simple-counter';
 
 @Component({
   selector: 'app-fancy-card',
@@ -6,6 +7,9 @@ import {Component, OnInit} from '@angular/core';
   styleUrls: ['./fancy-card.component.scss']
 })
 export class FancyCardComponent implements OnInit {
+  min = 0;
+  max = 10;
+  step = 2;
 
   constructor() {
   }
@@ -15,6 +19,14 @@ export class FancyCardComponent implements OnInit {
     arr.forEach((value, index, array) => {
       console.log(`${index} = ${value}`);
     });
+  }
+
+  handleMaxReached() {
+    alert('max reached');
+  }
+
+  handleMinReached() {
+    alert('min reached');
   }
 
 }

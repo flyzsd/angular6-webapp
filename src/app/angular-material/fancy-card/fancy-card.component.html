@@ -17,3 +17,4 @@
     <button mat-button>SHARE</button>
   </mat-card-actions>
 </mat-card>
+<simple-counter [min]="min" [max]="max" [step]="step" (maxReached)="handleMaxReached()" (minReached)="handleMinReached()"></simple-counter>
